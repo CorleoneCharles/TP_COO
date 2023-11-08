@@ -1,13 +1,14 @@
-#ifndef INTERPOLE_H
-#define INTERPOLE_H
+#ifndef INTERPOLE2_H
+#define INTERPOLE2_H
 
 #include "nr3.h"
+#include "interpole.h"
 
 
-class interpole{
+class interpole2 : public interpole{
 
 	public:
-		virtual int interpolation(const NRmatrix<int>& Image, double x, double y,int* OK)const ; 
+		int interpolation(const NRmatrix<int>& Image, double x, double y,int* OK)const ; 
 };		
 
 #endif
