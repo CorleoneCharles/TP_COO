@@ -3,6 +3,7 @@
 
 #include "nr3.h"
 
+//Responsabilité : calcule la valeur de l'image aux coordonnées x,y. OK est utilisé pour indiquer si les coordonnées sont en dehors de la zonne de support de l'image
 
 class interpole{
 
