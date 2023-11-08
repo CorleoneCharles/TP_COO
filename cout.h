@@ -9,17 +9,17 @@
 
 class Cout{
   private :
-  NRmatrix<int>* Im; //pointeur vers une matrice image
-  NRmatrix<int>* ImRef;
-  interpole* meth_interpole; //pointeur vers un objet de la classe interpole
-  similarite* meth_simil;
-  deformation d; //instance de déformation
+  NRmatrix<int>* Image; //pointeur vers une matrice image
+  NRmatrix<int>* ImageRef;
+  interpole* meth_interpo; //pointeur vers un objet de la classe interpole
+  similarite* meth_simila;
+  deformation defo; //instance de déformation
 
   public:
   Cout(NRmatrix<int>* im, NRmatrix<int>* imRef, interpole* m_interpole, similarite* m_simil); //constructeur
-  void setIm(NRmatrix<int>* im); //permettent de définir des membres privés
-  void setImRef(NRmatrix<int>* imRef);
-  void setInterpole(interpole* m_interpole);
-  void setSimil(similarite* m_simil);
+  void setImage(NRmatrix<int>* im); //permettent de définir des membres privés
+  void setImageRef(NRmatrix<int>* imRef);
+  void setmeth_interpo(interpole* m_interpole);
+  void setmeth_simila(similarite* m_simil);
   Doub operator() (VecDouble& param) const;
 };
