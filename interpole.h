@@ -7,7 +7,7 @@
 class interpole{
 
 	public:
-		virtual int interpolation(const NRmatrix<int>& Image, double x, double y,int* OK)const ; 
+		virtual int interpolation(const NRmatrix<int>& Image, double x, double y,int* OK)const=0; 
 };		
 
 #endif
