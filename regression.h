@@ -5,6 +5,6 @@
 #include "Deformation.h"
   class regressionfinale{ 
 public:
-regressionfinale{ NRmatrix <int>& Image1,NRmatrix <int>& Image2}//Image 1 est l'image déformées et Image2 celle non déformée
+virtual regressionfinale{ NRmatrix <int>& Image1,NRmatrix <int>& Image2}//Image 1 est l'image déformées et Image2 celle non déformée
 
 #endif
