@@ -2,7 +2,8 @@
 #define SIMILARITE_H
 
 #include "nr3.h"
-
+// Responsabilité : Calculer un critère de similraité entre 2 images
+// tests : Comparer des images identiques et différentes pour vérifier que les critères de similarité sont cohérents
 class similarite{
 
 	public:
