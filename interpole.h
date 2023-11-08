@@ -8,6 +8,9 @@ class interpole{
 
 	public:
 		virtual int interpolation(const NRmatrix<int>& Image, double x, double y,int* OK)const ; 
+
+// NRmatrix<int>& mask masque(const NRmatrix<int>& Image);
+
 };		
 
 #endif
