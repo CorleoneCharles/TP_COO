@@ -8,7 +8,7 @@
 
 class Transformation {
 public:
-  void transforme(vecDouble& param, double x, double y, double* x_res, double* y_res) const;
+  void transforme(vecDouble& param, double x, double y, double* x_transfo, double* y_transfo) const;
 };
 
 #endif
