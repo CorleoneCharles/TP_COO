@@ -10,7 +10,7 @@
 
 class Deformation {
 public:
-    void deformImage(const NRmatrix<int>& Im,const NRmatrix<int>& resDeforme, const NRmatrix<int>& resMask, VecDoub& param); //cf nr3
+    void deformImage(const NRmatrix<int>& Image,const NRmatrix<int>& Image_deforme, const NRmatrix<int>& Mask, VecDoub& param, const interpole& meth_interpole) const; //cf nr3
 };
 
 #endif
