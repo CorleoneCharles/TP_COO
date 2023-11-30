@@ -128,7 +128,7 @@ template <class T>
 NRvector<T>::NRvector(int n) : nn(n), v(n>0 ? new T[n] : NULL) {}
 
 template <class T>
-NRvector<T>::NRvector(int n, const T& a) : nn(n), v(n>0 ? new T[n] : NULL)
+NRvector<T>::NRvector(int n, const T& a) : nn(n), v(n>0 ? new T[n] : NULL) //parenthèse manquante sur v(n>0
 {
 	for(int i=0; i<n; i++) v[i] = a;
 }
