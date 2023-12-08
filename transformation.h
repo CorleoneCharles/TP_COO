@@ -8,10 +8,10 @@
 
 class Transformation {
 public:
-  void transforme(vecDouble& param, double x, double y, double* x_transfo, double* y_transfo) const;
-double theta=vecDouble[1];
-double tx=vecDouble[2];
-double ty=vecDouble[3];
+  void transforme(vecDoub& param, double x, double y, double* x_transfo, double* y_transfo) const;
+double theta=param[0];
+double tx=param[1];
+double ty=param[2];
 *xtransfo=cos(theta)*x-sin(theta)*y+tx;
 *ytransfo=cos(theta)*y+sin(theta)*x+ty;
 
