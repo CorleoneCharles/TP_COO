@@ -8,8 +8,10 @@
 class interpole1 : public interpole{
 
 	public:
-		int interpolation(const NRmatrix<int>& Image, double x, double y,int* OK)const;
-		virtual ~interpole1(){};
+		int interpolation(const NRmatrix<int>& Image, double x, double y,int* OK)const{
+			
+		}
+		~interpole1(){}
 		
 };		
 
