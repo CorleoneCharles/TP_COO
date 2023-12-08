@@ -5,7 +5,7 @@
 #include "transformation.h"
 #include "interpole.h"
 
-//Responsabilité : Deformer une image selon une transformation rigide donée
+//Responsabilité : Deformer une image selon une transformation rigide donnée
 // Tests : Déformer des images avec des paramètres connus et vérifier les résultats
 
 class Deformation {
