@@ -12,8 +12,8 @@ public:
 double theta=vecDouble[1];
 double tx=vecDouble[2];
 double ty=vecDouble[3];
-xtransfo=cos(theta)*x-sin(theta)*y+tx;
-ytransfo=cos(theta)*y+sin(theta)*x+ty;
+*xtransfo=cos(theta)*x-sin(theta)*y+tx;
+*ytransfo=cos(theta)*y+sin(theta)*x+ty;
 
 };
 
