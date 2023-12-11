@@ -13,7 +13,7 @@ for (int i=0;i<im.nrows();i++)
 return 	im;
 }
 
-VecDoub divisionethistogrammematrice(const NRmatrix<double> &im2,const NRmatrix <int>& Mask2){
+VecDoub divisionethistogrammematrice(const NRmatrix<int> &im2,const NRmatrix <int>& Mask2){
 NRmatrix <int> im;
 im=im2;
 VecDoub histog1(16);
@@ -27,12 +27,12 @@ for (int i=0;i<im.nrows();i++)
 return histog1;
 }
 
-NRmatrix<double> obtenirp12(NRmatrix<double> &im2,NRmatrix<double> &im1,const NRmatrix <int>& Mask1,const NRmatrix <int>& Mask2){
+NRmatrix<int> obtenirp12(NRmatrix<int> &im2,NRmatrix<int> &im1,const NRmatrix <int>& Mask1,const NRmatrix <int>& Mask2){
 NRmatrix <int> im3;
 NRmatrix <int> im;
 im3=im2;
 im=im1;
-NRmatrix<double> P12(16,16,0);
+NRmatrix<int> P12(16,16,0);
 for (int i=0;i<im.nrows();i++)
  {
   for (int j=0;j<im.ncols();j++){
@@ -46,16 +46,16 @@ for (int i=0;i<im.nrows();i++)
 return P12;
 }
 
-similarite(const NRmatrix<double> &im1,const NRmatrix<double> &im2,const NRmatrix <int>& Mask1,const NRmatrix <int>& Mask2){
-NRmatrix<double> imrecale1;
-NRmatrix<double> imrecale2;   
+similarite(const NRmatrix<int> &im1,const NRmatrix<int> &im2,const NRmatrix <int>& Mask1,const NRmatrix <int>& Mask2){
+NRmatrix<int> imrecale1;
+NRmatrix<int> imrecale2;   
 imrecale1=algorecalage(im1);
 imrecale2=algorecalage(im2);
 VecDoub histo1; 
 VecDoub histo2;
 histo1=divisionethistogrammematrice(imrecale1, Mask1);
 histo2=divisionethistogrammematrice(imrecale2, Mask2);
-NRmatrix<double> P12(16,16,0);
+NRmatrix<int> P12(16,16,0);
 P12=obtenirp12(imrecale1,imrecale2);	
 int somme=0;
 for (int i=0;i<P12.nrows();i++)
