@@ -49,7 +49,7 @@ for (int i=0;i<im.nrows();i++)
 return P12;
 }
 
-similarite(const NRmatrix<double> &im2,const NRmatrix<double> &im1,const NRmatrix <int>& Mask1,const NRmatrix <int>& Mask2){
+similarite(const NRmatrix<double> &im1,const NRmatrix<double> &im2,const NRmatrix <int>& Mask1,const NRmatrix <int>& Mask2){
 imrecale1=algorecalage(im1);
 imrecale2=algorecalage(im2);
 histo1=divisionethistogrammematrice(imrecale1, Mask1);
@@ -69,6 +69,15 @@ class similarite1 : public similarite{
 
 	public:
 	double similaire(const NRmatrix <int>& Image1,const NRmatrix <int>& Mask1,const NRmatrix <int>& Image2,const NRmatrix <int>& Mask2);
+
+
+
+double similaire(const NRmatrix <int>& Image1,const NRmatrix <int>& Mask1,const NRmatrix <int>& Image2,const NRmatrix <int>& Mask2){
+	return similaire(Image1,Image2,Mask1,Mask2);
+}
+
+
+
 };
 
 
