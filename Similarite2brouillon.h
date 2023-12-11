@@ -24,24 +24,24 @@ NRmatrix<double> divisionethistogrammematrice(const NRmatrix<double> &im2, VecDo
 im=im2;
 for (int i=0;i<im.nrows();i++)
  {
-  for (int j=0;j<im.ncols();j++)
+  for (int j=0;j<im.ncols();j++){
    im[i][j]=floor(im[î][j]/16);
    
-   in[im[i][j]]=in[im[i][j]]+1;
+   in[im[i][j]]=in[im[i][j]]+1;}
  }
-return im;
+return in;
 }
 
 NRmatrix<double> obtenirp12(NRmatrix<double> &im2,NRmatrix<double> &im1, NRmatrix<double> &P12){
 im3=im2;
 im=im1;
-
 for (int i=0;i<im.nrows();i++)
  {
-  for (int j=0;j<im.ncols();j++)
+  for (int j=0;j<im.ncols();j++){
    im[i][j]=floor(im[î][j]/16);
    im3[i][j]=floor(im3[î][j]/16);
    P12[im[i][j],im3[i][j]]=P12[im[i][j],im[i][j]]+1;
+   }NRmatrix<double> im(2,3,120);
  }
 return P12;
 }
