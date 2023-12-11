@@ -20,7 +20,7 @@ return 	im;
 
 
 VecDoub divisionethistogrammematrice(const NRmatrix<double> &im2,const NRmatrix <int>& Mask2){
-im=im2;
+im=im2;nc des valeurs de type bool. Par exemple, i != 0 elle a true ou false dépend de la valeur de i.
 VecDoub histog1(16);
 for (int i=0;i<im.nrows();i++)
  {
