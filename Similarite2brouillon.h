@@ -76,18 +76,12 @@ class similarite1 : public similarite{
 
 
 
-double similaire(const NRmatrix <int>& Image1,const NRmatrix <int>& Mask1,const NRmatrix <int>& Image2,const NRmatrix <int>& Mask2){
-	return similaire(Image1,Image2,Mask1,Mask2);
-}
+double similaire(const NRmatrix <int>& Image1,const NRmatrix <int>& Mask1,const NRmatrix <int>& Image2,const NRmatrix <int>& Mask2)
+	{
+	return similaire(Image1,Image2,Mask1,Mask2);}
 
 
 
 };
-
-
-
-
-};
-
 
 #endif
