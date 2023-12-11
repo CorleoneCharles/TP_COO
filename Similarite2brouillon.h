@@ -32,10 +32,10 @@ for (int i=0;i<im.nrows();i++)
 return histog;
 }
 
-NRmatrix<double> obtenirp12(NRmatrix<double> &im2,NRmatrix<double> &im1, NRmatrix<double> &P12){
+NRmatrix<double> obtenirp12(NRmatrix<double> &im2,NRmatrix<double> &im1){
 im3=im2;
 im=im1;
-NRmatrix<double> P12(16,16,0)
+NRmatrix<double> P12(16,16,0);
 for (int i=0;i<im.nrows();i++)
  {
   for (int j=0;j<im.ncols();j++){
@@ -53,7 +53,7 @@ imrecale2=algorecalage(im2);
 histo1=divisionethistogrammematrice(imrecale1);
 histo2=divisionethistogrammematrice(imrecale2);
 NRmatrix<double> P12(16,16,0);
-	
+p12=obtenirp12(imrecalge1,imrecalage2);	
 int somme=0;
 for (int i=0;i<p12.nrows();i++)
  {
