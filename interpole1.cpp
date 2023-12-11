@@ -1,6 +1,3 @@
-#ifndef INTERPOLE1_H
-#define INTERPOLE1_H
-
 #include "nr3.h"
 #include "interpole1.h"
 #include <iostream>
@@ -44,5 +41,3 @@ double interpole1::interpolation(const NRmatrix<double>& Image, double x, double
 		return res;
 	}	
 }
-
-#endif
