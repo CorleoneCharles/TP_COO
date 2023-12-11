@@ -6,8 +6,8 @@
 
 
 
-
-NRmatrix<double> algorecalge(const NRmatrix<double> &imoriginal){
+NRmatrix<int> algorecalge(const NRmatrix<int> &imoriginal){
+NRmatrix <int> im;
 im=imoriginal;
 for (int i=0;i<im.nrows();i++)
  {
@@ -20,19 +20,22 @@ return 	im;
 
 
 VecDoub divisionethistogrammematrice(const NRmatrix<double> &im2,const NRmatrix <int>& Mask2){
-im=im2;nc des valeurs de type bool. Par exemple, i != 0 elle a true ou false dépend de la valeur de i.
+NRmatrix <int> im;
+im=im2;
 VecDoub histog1(16);
 for (int i=0;i<im.nrows();i++)
  {
   for (int j=0;j<im.ncols();j++){
-   im[i][j]=floor(im[î][j]/16);
+   im[i][j]=floor(im[i][j]/16);
    
-   inim[im[i][j]-1]=in[im[i][j]-1]+1;}
+   histog1[im[i][j]-1]=histog1[im[i][j]-1]+1;}
  }
-return histog;
+return histog1;
 }
 
 NRmatrix<double> obtenirp12(NRmatrix<double> &im2,NRmatrix<double> &im1,const NRmatrix <int>& Mask1,const NRmatrix <int>& Mask2){
+NRmatrix <int> im3;
+NRmatrix <int> im;
 im3=im2;
 im=im1;
 NRmatrix<double> P12(16,16,0);
@@ -52,15 +55,16 @@ return P12;
 similarite(const NRmatrix<double> &im1,const NRmatrix<double> &im2,const NRmatrix <int>& Mask1,const NRmatrix <int>& Mask2){
 imrecale1=algorecalage(im1);
 imrecale2=algorecalage(im2);
+
 histo1=divisionethistogrammematrice(imrecale1, Mask1);
 histo2=divisionethistogrammematrice(imrecale2, Mask2);
 NRmatrix<double> P12(16,16,0);
-p12=obtenirp12(imrecalge1,imrecalage2);	
+P12=obtenirp12(imrecalge1,imrecalage2);	
 int somme=0;
 for (int i=0;i<p12.nrows();i++)
  {
   for (int j=0;j<p12.ncols();j++){
-   somme=somme+P12[i][j]*log(P12[i][j]/(i1[i]*i2[j]));
+   somme=somme+P12[i][j]*log(P12[i][j]/(histo1[i]*histo2[j]));
   }
  }
 return somme; 
@@ -75,6 +79,11 @@ class similarite1 : public similarite{
 double similaire(const NRmatrix <int>& Image1,const NRmatrix <int>& Mask1,const NRmatrix <int>& Image2,const NRmatrix <int>& Mask2){
 	return similaire(Image1,Image2,Mask1,Mask2);
 }
+
+
+
+};
+
 
 
 
